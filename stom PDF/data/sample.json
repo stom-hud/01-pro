@@ -1,0 +1,24 @@
+[
+  {
+    "invoice_id": "INV-001",
+    "patient_name": "Иванов Иван",
+    "patient_phone": "+7 (900) 000-00-00",
+    "doctor_name": "Петров П.П.",
+    "service_name": "Профессиональная гигиена",
+    "service_date": "2026-01-20",
+    "comment": "Оплата наличными",
+    "total": "3500",
+    "currency": "RUB"
+  },
+  {
+    "invoice_id": "INV-002",
+    "patient_name": "Сидорова Анна",
+    "patient_phone": "+7 (900) 111-11-11",
+    "doctor_name": "Смирнова А.А.",
+    "service_name": "Лечение кариеса",
+    "service_date": "2026-01-20",
+    "comment": "Оплата картой",
+    "total": "6200",
+    "currency": "RUB"
+  }
+]

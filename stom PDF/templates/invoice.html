@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Чек {{invoice_id}}</title>
+  <style>
+    /* Дополнительные стили шаблона (WeasyPrint получит еще базовые стили из скрипта) */
+    .row { display: flex; justify-content: space-between; gap: 16px; }
+    .muted { color: #666; font-size: 10pt; }
+    .box { border: 1px solid #ddd; padding: 10px; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border-bottom: 1px solid #eee; padding: 6px 4px; text-align: left; }
+    th { background: #fafafa; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div>
+      <h2 style="margin: 0 0 4px 0;">Чек</h2>
+      <div class="muted">Invoice ID: <b>{{invoice_id}}</b></div>
+      <div class="muted">Сгенерировано: {{generated_at}}</div>
+    </div>
+    <div class="box" style="min-width: 260px;">
+      <div><b>Пациент:</b> {{patient_name}}</div>
+      <div><b>Телефон:</b> {{patient_phone}}</div>
+      <div><b>Врач:</b> {{doctor_name}}</div>
+    </div>
+  </div>
+
+  <div class="box" style="margin-top: 12px;">
+    <div><b>Услуга:</b> {{service_name}}</div>
+    <div><b>Дата:</b> {{service_date}}</div>
+    <div><b>Комментарий:</b> {{comment}}</div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Позиция</th>
+        <th class="right">Сумма</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{service_name}}</td>
+        <td class="right">{{total}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top: 10px;" class="right">
+    <div><b>Итого:</b> {{total}}</div>
+    <div class="muted">Валюта: {{currency}}</div>
+  </div>
+</body>
+</html>
